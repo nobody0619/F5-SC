@@ -26,17 +26,17 @@ What is the pressure at piston X? / Berapakah tekanan di omboh X?",3 N/cm²,5 N/
 Surface area of piston X = Luas omboh X = 4 cm²
 Surface area of piston Y = Luas omboh Y = 32 cm²
 
-What is the output force? / Berapakah daya output?",32N,64N,80N,128N,,,,,,,,B,
+What is the output force? / Berapakah daya output?",32N,64N,80N,128N,,,,,,,,D,
 ,radio,"Input force = Daya input = 5 N
 Output force = Daya output = 50 N
 Surface area of piston X = Luas omboh X = 6 cm²
 
-What is the surface area of piston Y? / Berapakah luas omboh Y?",30 cm²,36 cm²,48 cm²,60 cm²,,,,,,,,A,
+What is the surface area of piston Y? / Berapakah luas omboh Y?",30 cm²,36 cm²,48 cm²,60 cm²,,,,,,,,D,
 ,radio,"Input force = Daya input = 10 N
 Surface area of piston X = Luas omboh X = 2 cm²
 Surface area of piston Y = Luas omboh Y = 10 cm²
 
-What is the output force? / Berapakah daya output?",10N,25N,30N,50N,,,,,,,,B,
+What is the output force? / Berapakah daya output?",10N,25N,30N,50N,,,,,,,,D,
 ,radio,"Input force = Daya input = 18 N
 Surface area of piston X = Luas omboh X = 3 cm²
 Output force = Daya output = 180 N
