@@ -1,0 +1,11 @@
+﻿title,type,question,A,B,C,D,E,F,G,H,I,J,K,L,answer,image
+Alcohol,checkbox,Alcohol / Alkohol 有什么 elements / unsur?,Carbon / Karbon,Oxygen / Oksigen,Hydrogen / Hidrogen,Nitrogen,Helium,,,,,,,,"A,B,C",
+,radio,Fermentation / Penapaian,Glucose/Glukosa → Ethanol/Etanol + Carbon dioxide/Karbon dioksida,Alcohol/Alkohol + Acid/Asid → Ester,Glucose/Glukosa + Oxygen/Oksigen → Carbon dioxide/Karbon dioksida + Water/Air,Ethanol/Etanol + Oxygen/Oksigen → Acetic acid/Asid asetat + Water/Air,,,,,,,,,A,
+,radio,Esterification / Pengesteran,Glucose/Glukosa → Ethanol/Etanol + Carbon dioxide/Karbon dioksida,Alcohol/Alkohol + Acid/Asid → Ester,Glucose/Glukosa + Oxygen/Oksigen → Carbon dioxide/Karbon dioksida + Water/Air,Ethanol/Etanol + Oxygen/Oksigen → Acetic acid/Asid asetat + Water/Air,,,,,,,,,B,
+,radio,如何得到 Pure ethanol / Etanol tulen?,Distillation / Penyulingan,Esterification / Pengesteran,Saponification / Saponifikasi,Fermentation / Penapaian,,,,,,,,,A,
+,radio,Alcohol addiction / Ketagihan alkohol 会导致,Cirrhosis / Sirosis,Diabetes mellitus,Arteriosclerosis / Arteriosklerosis,Stroke / Strok,,,,,,,,,A,
+,radio,Yease / Yis 里有什么 enzyme / enzim ?,Zymase / Zimase,Protease,Amylase / Amilase,Lipase,,,,,,,,,A,
+,radio,Limewater + Carbon dioxide / Air kapur + Karbon dioksida 会怎样?,Turns blue / Bertukar menjadi biru,Turn cloudy / Menjadi keruh,Produces bubbles / Menghasilkan buih,Becomes solid immediately / Menjadi pepejal serta-merta,,,,,,,,,B,
+,radio,Ethanol / Etanol 的 Boiling point / Titik didih ?,78°C,100°C,121°C,72°C,63°C,,,,,,,,A,
+,text,Carbon dioxide / Karbon dioksida 会导致 limewater / air kapur ,,,,,,,,,,,,,"turn cloudy,menjadi keruh",
+,checkbox,Alcohol / Alkohol 的特点,Colourless / Tidak berwarna,Distinctive smell / Mempunyai bau yang tersendiri,Soluble in water / Larut dalam air,Volatile / Mudah meruap,Burn in blue flame / Bakar dalam nyalaan biru,Burn with no soot / Bakar dengan tiada jelaga,Has a sweet taste / Mempunyai rasa manis,Does not evaporate easily / Tidak mudah meruap,Highly viscous / Sangat likat,Produces black smoke when burned / Menghasilkan asap hitam apabila dibakar,Solid at room temperature / Pepejal pada suhu bilik,Reacts violently with water / Bertindak balas dengan air secara ganas,"A,B,C,D,E,F",

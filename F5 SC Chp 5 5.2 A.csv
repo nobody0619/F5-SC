@@ -1,0 +1,8 @@
+﻿title,type,question,A,B,C,D,E,F,answer,image
+Hydrocarbon,checkbox,Hydrocarbon / Hidrokarbon 有什么 elements / unsur?,Carbon / Karbon,Oxygen / Oksigen,Hydrogen / Hidrogen,Nitrogen,Helium,,"A,C",
+,radio,have single covalent bonds / mempunyai ikatan kovalen tunggal,Saturated hydrocarbon compound / Sebatian hidrokarbon tepu,Unsaturated hydrocarbon compound / Sebatian hidrokarbon tak tepu,,,,,A,
+,radio,alkanes / alkana,Saturated hydrocarbon compound / Sebatian hidrokarbon tepu,Unsaturated hydrocarbon compound / Sebatian hidrokarbon tak tepu,,,,,A,
+,radio,alkenes / alkena,Saturated hydrocarbon compound / Sebatian hidrokarbon tepu,Unsaturated hydrocarbon compound / Sebatian hidrokarbon tak tepu,,,,,B,
+,radio,have double covalent bond or triple covalent bond / mempunyai ikatan kovalen ganda dua atau ikatan kovalen ganda tiga,Saturated hydrocarbon compound / Sebatian hidrokarbon tepu,Unsaturated hydrocarbon compound / Sebatian hidrokarbon tak tepu,,,,,B,
+,radio,这属于,alkane / alkana,alkene / alkena,,,,,A,alkane_formulae.png
+,radio,这属于,alkane / alkana,alkene / alkena,,,,,B,alkene_formulae.png

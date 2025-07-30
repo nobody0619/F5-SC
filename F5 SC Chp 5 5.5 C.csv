@@ -1,0 +1,8 @@
+﻿title,type,question,A,B,C,D,E,F,answer,image
+肥皂制作,text,制造肥皂的过程是,,,,,,,"saponification,saponifikasi",
+,radio,制造肥皂的过程是,Oil + Alkali → Fatty acid salt + Glycerol / Minyak + Alkali → Garam asid lemak + Gliserol,Oil + Acid → Fatty acid + Water / Minyak + Asid → Asid lemak + Air,Oil + Water → Emulsion + Glycerol / Minyak + Air → Emulsi + Gliserol,Oil + Salt → Soap + Alcohol / Minyak + Garam → Sabun + Alkohol,,,A,
+,checkbox,制造肥皂的过程为什么要加 Sodium chloride / Natrium Klorida,To solidify the soap / untuk memekalkan sabun,To reduce the solubility of soap in water / untuk mengurangkan keterlarutan sabun dalam air,To enhance the fragrance of soap / Untuk menambahkan bau wangi sabun,To speed up the saponification process / Untuk mempercepatkan proses saponifikasi,,,"A,B",
+,radio,肥皂分子的 head / kepala 也叫,hydrophilic / hidrofilik,hydrophobic / hidrofobik,,,,,A,
+,radio,肥皂分子的 head / kepala 会溶解进,water / air,oil or grease / minyak atau gris,,,,,A,
+,radio,肥皂分子的  tail / ekor 会溶解进,water / air,oil or grease / minyak atau gris,,,,,B,
+,radio,肥皂分子的 tail / ekor 也叫,hydrophilic / hidrofilik,hydrophobic / hidrofobik,,,,,B,
