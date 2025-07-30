@@ -1,0 +1,8 @@
+﻿title,type,question,A,B,C,D,E,F,G,H,I,J,answer,image
+Factors Affecting Rate of Reaction,checkbox,哪些是 factor affect rate of reaction / faktor yang mempengaruhi kadar tindak balas,Temperature of reactants / Suhu bahan tindak balas,Concentration of reactants / Kepekatan bahan tindak balas,Size of solid reactants / Saiz bahan tindak balas berbentuk pepejal,Presence of catalyst / Kehadiran mangkin,Pressure / Tekanan,Volume of reactants / Isipadu bahan tindak balas,State of matter of products / Keadaan jirim hasil tindak balas,Color of reactants / Warna bahan tindak balas,Density of reactants / Ketumpatan bahan tindak balas,Type of container used / Jenis bekas yang digunakan,"A,B,C,D,E",
+,radio,Temperature of reactants / Suhu bahan tindak balas 越高，rate of reaction / kadar tindak balas 越,high / tinggi,low / rendah,,,,,,,,,A,
+,radio,Concentration of reactants / Kepekatan bahan tindak balas 越高，rate of reaction / kadar tindak balas 越,high / tinggi,low / rendah,,,,,,,,,A,
+,radio,Pressure / Tekanan 越高，rate of reaction / kadar tindak balas 越,high / tinggi,low / rendah,,,,,,,,,A,
+,radio,Size of solid reactants / Saiz bahan tindak balas berbentuk pepejal 越大，rate of reaction / kadar tindak balas 越,high / tinggi,low / rendah,,,,,,,,,B,
+,radio,Size of solid reactants / Saiz bahan tindak balas berbentuk pepejal 越小，面积越,大,小,,,,,,,,,A,
+,radio,Presence of catalyst / Kehadiran mangkin 会导致 rate of reaction / kadar tindak balas,high / tinggi,low / rendah,,,,,,,,,A,

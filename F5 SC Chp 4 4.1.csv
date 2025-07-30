@@ -1,0 +1,10 @@
+﻿title,type,question,A,B,C,D,E,F,G,answer,image
+Rate of Reaction,radio,Fast reaction 的 rate of reaction / Tindak balas cepat 的 kadar tindak balas,high / tinggi,low / rendah,,,,,,A,
+,radio,Reactant / Bahan tindak balas 会,增加,减少,,,,,,B,
+,radio,Product / Hasil tindak balas 会,增加,减少,,,,,,A,
+,radio,Slow reaction 的 rate of reaction / Tindak balas perlahan 的 kadar tindak balas,high / tinggi,low / rendah,,,,,,B,
+,radio,Fast reaction 的 reaction time / Tindak balas cepat 的 masa tindak balas,shorter / singkat,longer / panjang,,,,,,A,
+,radio,Slow reaction 的 reaction time / Tindak balas perlahan 的 masa tindak balas,shorter / singkat,longer / panjang,,,,,,B,
+,radio,Burning of butane gas / Nyalaan gas butana 属于,fast reaction / tindak balas cepat,slow reaction /  tindak balas perlahan,,,,,,A,
+,radio,Rusting of iron / Pengaratan besi 属于,fast reaction / tindak balas cepat,slow reaction /  tindak balas perlahan,,,,,,B,
+,radio,Rate of reaction / Kadar tindak balas 怎么算？,210 ÷ 40,270 ÷ 40,40 ÷ 210,40 ÷ 270,,,,C,rate_of_reaction.png
