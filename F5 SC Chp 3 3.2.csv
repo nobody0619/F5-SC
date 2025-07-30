@@ -1,0 +1,8 @@
+﻿title,type,question,A,B,C,D,E,F,G,answer,image
+3.2+3.3,radio,BOD 越高，代表水越,肮脏,干净,,,,,,A,
+,radio,水里溶解的氧气越多，代表水越,肮脏,干净,,,,,,B,
+,radio,methylene blue solution to decolourise / warna larutan metilena biru luntur 的时间越长，代表水越,肮脏,干净,,,,,,B,
+,checkbox,哪些是 Effective Microorganism Mud Balls / Bebola Lumpur Mikroorganisma Efektif 里的微生物？,Lactic acid bacteria / Bakteria asid laktik,Photosynthetic bacteria / Bakteria fotosintetik,Yeast / Yis,Nitrogen-fixing bacteria / Bakteria pengikat nitrogen,Decomposing fungi / Kulat pengurai,E. coli (Escherichia coli),,"A,B,C",
+,text,这叫什么？,,,,,,,,"microalgae,mikroalga,marine microalgae,mikroalga marin",microalgae.png
+,text,这叫什么？,,,,,,,,"eutrophication,eutrofikasi",eutrophication.png
+,radio,池塘/河流 营养过剩的原因是 nitrate ion / ion nitrat 和phosphate ion / ion fosfat ,太少,太多,,,,,,B,

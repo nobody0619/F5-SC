@@ -1,0 +1,10 @@
+﻿title,type,question,A,B,C,D,E,F,G,answer,image
+Method of reproduction,checkbox,它的繁殖方式,Binary Fission / Belahan Dedua,Conjugation / Konjugasi,Budding / Pertunasan,Duplication / Duplikasi,Spore Formation / Pembentukan Spora,,,"A,B",chlamydomonas.png
+,radio,它的繁殖方式,Binary Fission / Belahan Dedua,Conjugation / Konjugasi,Budding / Pertunasan,Duplication / Duplikasi,Spore Formation / Pembentukan Spora,,,B,spirogyra.png
+,checkbox,它的繁殖方式,Binary Fission / Belahan Dedua,Conjugation / Konjugasi,Budding / Pertunasan,Duplication / Duplikasi,Spore Formation / Pembentukan Spora,,,"A,B",euglena.png
+,checkbox,它的繁殖方式,Binary Fission / Belahan Dedua,Conjugation / Konjugasi,Budding / Pertunasan,Duplication / Duplikasi,Spore Formation / Pembentukan Spora,,,"A,B",amoeba.png
+,checkbox,它的繁殖方式,Binary Fission / Belahan Dedua,Conjugation / Konjugasi,Budding / Pertunasan,Duplication / Duplikasi,Spore Formation / Pembentukan Spora,,,"A,B",paramecium.png
+,checkbox,它的繁殖方式,Binary Fission / Belahan Dedua,Conjugation / Konjugasi,Budding / Pertunasan,Duplication / Duplikasi,Spore Formation / Pembentukan Spora,,,"B,E",mucor.png
+,radio,它的繁殖方式,Binary Fission / Belahan Dedua,Conjugation / Konjugasi,Budding / Pertunasan,Duplication / Duplikasi,Spore Formation / Pembentukan Spora,,,C,yeast.png
+,radio,它的繁殖方式,Binary Fission / Belahan Dedua,Conjugation / Konjugasi,Budding / Pertunasan,Duplication / Duplikasi,Spore Formation / Pembentukan Spora,,,D,virus.png
+,radio,它的繁殖方式,Binary Fission / Belahan Dedua,Conjugation / Konjugasi,Budding / Pertunasan,Duplication / Duplikasi,Spore Formation / Pembentukan Spora,,,D,hiv.png
