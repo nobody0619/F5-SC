@@ -1,0 +1,21 @@
+﻿title,type,question,A,B,C,D,E,F,G,answer,image
+Activities of the Sun that Affect Earth,checkbox,太阳是由什么组成的？,Hydrogen / Hidrogen,Helium,Oxygen / Oksigen,Fluorine / Florin,Neon,,,"A,B",
+,checkbox,太阳的 Atmosphere / Atmosfera 是哪些？,Corona / Korina,Chromosphere / Kromosfera,Photosphere / Fotosfera,Convection zone / Zon perolakan,Radiation zone / Zon radiasi,Core / Teras,,"A,B,C",
+,radio,平时我们看的太阳是,Corona / Korina,Chromosphere / Kromosfera,Photosphere / Fotosfera,Convection zone / Zon perolakan,Radiation zone / Zon radiasi,Core / Teras,,C,
+,checkbox,哪两个是日全食才能看见的？,Corona / Korina,Chromosphere / Kromosfera,Photosphere / Fotosfera,Convection zone / Zon perolakan,Radiation zone / Zon radiasi,Core / Teras,,"A,B",
+,radio,Photosphere / Fotosphera 表面是由什么形成的？,Granules / Granul,Sunspot / Tompok Matahari,Prominences / Semarak suria,Solar flare / Nyalaan suria,Solar wind / Angin Suria,Coronal mass ejections / Lentingan jisim korona,,A,
+,radio,Photosphere / Fotosphera 表面较黑的是？,Granules / Granul,Sunspot / Tompok Matahari,Prominences / Semarak suria,Solar flare / Nyalaan suria,Solar wind / Angin Suria,Coronal mass ejections / Lentingan jisim korona,,B,
+,radio,为什么太阳黑子比较暗？,黑石头形成的,比周围冷,吸收阳光,被灰尘覆盖,比周围热,,,B,
+,radio,太阳周期平均多久？,11天,11月,11年,11秒,,,,C,
+,radio,Prominences / semarak suria 是由什么组成? ,Solid particles / Zarah pepejal,Molten lava / Lava cair,Loops of hot gas and plasma / Gelung gas panas dan plasma,Ice crystals / Kristal ais,,,,C,
+,checkbox,Solar flares and coronal mass ejections / Nyalaan suria dan lentingan jisim korona 会影响到什么？,telecommunication / telekomunikasi,navigation system / sistem navigasi,electric power lines / talian kuasa elektrik,Rainfall patterns / Corak hujan,Oxygen levels in the atmosphere / Tahap oksigen dalam atmosfera,Animal migration / Migrasi haiwan,,"A,B,C",
+,radio,Solar wind / Angin Suria 的主要成分？,Oxygen and carbon dioxide / Oksigen dan karbon dioksida,Water vapour / Wap air,Magnetic rocks / Batu magnetik,High-speed charged particles / Zarah bercas berkelajuan tinggi,,,,D,
+,radio,"What does a high number of Sunspot usually indicate? /
+Apakah maksud bilangan tompok Matahari yang tinggi?  ",Weak magnetic field / Medan magnet yang lemah,Less solar activity / Kurang aktiviti suria,Higher solar activity / Aktiviti suria yang tinggi,Shorter days / Hari lebih pendek,,,,C,
+,radio,"Where do granules appear on the Sun? /
+Di manakah granul muncul pada Matahari?  ",Corona / Korona,Chromosphere / Kromosfera,Photosphere / Fotosfera,Core / Teras,,,,C,
+,checkbox,哪个会导致 Aurora 的产生？(3个),Solar flares / Nyalaan suria,Granules / Granul,Solar winds / Angin suria,Sunspots / Tompok Matahari,Coronal mass ejections / Lentingan jisim korona,,,"A,C,E",
+,radio,地球的保护层的形状受什么影响？,Solar flares / Nyalaan suria,Granules / Granul,Solar winds / Angin suria,Sunspots / Tompok Matahari,Coronal mass ejections / Lentingan jisim korona,,,C,
+,radio,"What is a CME (coronal mass ejection)? /
+Apakah itu lentingan jisim korona?  ",A sunspot blast / Letupan tompok Matahari,A wave of solar wind / Gelombang angin suria,A huge release of plasma from the corona / Pembebasan besar plasma dari korona,A type of solar flare / Jenis nyalaan suria,,,,C,
+,text,地球的保护层叫,,,,,,,,"magnetosphere,magnetosfera",
