@@ -223,12 +223,30 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       const delta = isC ? (q.attempt?1:2) : (q.attempt?-2:-1);
       score+=delta; if(isC) correct++; else wrong++;
-      let ansTxt='';
-      if (delta<0) {
-        ansTxt = q.answer.split(',').map(letter=>q[letter]||letter)
-                  .join(' / ');
-      }
-      fb.textContent = isC?`正确! +${delta}`:`错误! ${delta} 正确答案: ${ansTxt}`;
+let ansTxt = '';
+if (delta < 0) {
+  if (q.type === 'text') {
+    // 文本题答案逐行显示
+    ansTxt = q.answer.split(',')
+              .map(s => s.trim())
+              .filter(Boolean)
+              .map((s, i) => `${i + 1}. ${s}`)
+              .join('<br>');
+  } else {
+    // 选择题：只显示选项文字，不显示 A/B/C/D
+    ansTxt = q.answer.split(',')
+              .map(s => s.trim().toUpperCase())
+              .filter(Boolean)
+              .map(letter => q[letter] || letter)
+              .join('<br>');
+  }
+}
+// 用 innerHTML 才能渲染换行
+fb.innerHTML = isC
+  ? `正确! +${delta}`
+  : `错误! ${delta}<br>正确答案：<br>${ansTxt}`;
+
+
       updateUI(delta);
       sb.disabled = true;
       const nb = document.createElement('button');
