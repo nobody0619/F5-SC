@@ -375,9 +375,15 @@ sb.onclick = () => {
   const explainLine = q.explain
     ? `<br><span style="font-weight:normal">${String(q.explain)}</span>` : '';
 
-  fb.innerHTML = isC
-    ? `正确! +${delta}${explainLine}`
-    : `错误! ${delta}<br>正确答案：<br>${ansTxt}${explainLine}`;
+fb.innerHTML = isC
+  ? `正确! +${delta}<br>正确答案：<br>${String(q.answer || '')
+       .split(',')
+       .map(s => s.trim())
+       .filter(Boolean)
+       .map(letter => q[letter] || letter)
+       .join('<br>')}${explainLine}`
+  : `错误! ${delta}<br>正确答案：<br>${ansTxt}${explainLine}`;
+
 
   // 5) 刷新状态、锁按钮、出下一题
   updateUI(delta);
