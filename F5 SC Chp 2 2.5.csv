@@ -1,0 +1,13 @@
+﻿title,type,question,A,B,C,D,E,F,G,H,answer,image
+Food processing / Pemprosesan makanan,radio,通过 yeast or bacteria / yis dan bakteria,Fermentation / Penapaian,Dehydration / Pendehidratan,Pasteurisation / Pempasteuran,Canning / Pengetinan,Freezing / Penyejukbekuan,Irridation / Penyinaran,Vacuum packaging / Pembungkusan vakum,,A,
+,radio,remove water / menyingkirkan air,Fermentation / Penapaian,Dehydration / Pendehidratan,Pasteurisation / Pempasteuran,Canning / Pengetinan,Freezing / Penyejukbekuan,Irridation / Penyinaran,Vacuum packaging / Pembungkusan vakum,,B,
+,radio,"Liquid is heated to a temperature below its boiling point to kill pathogens and then cooled quickly. /
+Cecair dipanaskan pada suhu di bawah takat didih cecair untuk membunuh patogen dan kemudian disejukkan dengan cepat.",Fermentation / Penapaian,Dehydration / Pendehidratan,Pasteurisation / Pempasteuran,Canning / Pengetinan,Freezing / Penyejukbekuan,Irridation / Penyinaran,Vacuum packaging / Pembungkusan vakum,,C,
+,radio,"Food is heated to a temperature exceeding 115°C under high pressure to kill microorganisms and their spores / 
+Makanan dipanaskan pada suhu yang tinggi melebihi 115°C di bawah tekanan tinggi untuk membunuh mikroorganisma dan sporanya.",Fermentation / Penapaian,Dehydration / Pendehidratan,Pasteurisation / Pempasteuran,Canning / Pengetinan,Freezing / Penyejukbekuan,Irridation / Penyinaran,Vacuum packaging / Pembungkusan vakum,,D,
+,radio,"Food is kept at a temperature of 0°C or lower so that it can last longer / 
+Makanan disimpan pada suhu 0°C atau lebih rendah supaya dapat tahan lebih lama",Fermentation / Penapaian,Dehydration / Pendehidratan,Pasteurisation / Pempasteuran,Canning / Pengetinan,Freezing / Penyejukbekuan,Irridation / Penyinaran,Vacuum packaging / Pembungkusan vakum,,E,
+,radio,"Food is exposed to ionising radiation such as gamma ray, ultraviolet ray and X-ray to kill microorganisms / 
+Makanan didedahkan pada sinaran mengion seperti sinar gama, sinar ultraungu dan sinar-X untuk membunuh mikroorganisma",Fermentation / Penapaian,Dehydration / Pendehidratan,Pasteurisation / Pempasteuran,Canning / Pengetinan,Freezing / Penyejukbekuan,Irridation / Penyinaran,Vacuum packaging / Pembungkusan vakum,,F,
+,radio,Air is removed completely / Udara disingkirkan,Fermentation / Penapaian,Dehydration / Pendehidratan,Pasteurisation / Pempasteuran,Canning / Pengetinan,Freezing / Penyejukbekuan,Irridation / Penyinaran,Vacuum packaging / Pembungkusan vakum,,G,
+,radio,Pasteurisation / Pempasteuran 是加热到多少度&多久后马上冷却？,63°C & 30minutes,63°C & 15Seconds,72°C & 30minutes,72°C & 15Seconds,63°C & 30Seconds,72°C & 15minutes,63°C & 15minutes,72°C & 30Seconds,"A,D",
