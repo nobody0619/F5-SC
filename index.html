@@ -103,6 +103,44 @@
     @keyframes healPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.18);filter:drop-shadow(0 0 8px #22c55e)}}
     .focus-card{outline:4px solid rgba(20,184,166,.35);box-shadow:0 0 0 4px rgba(20,184,166,.12)}
 
+
+    body.theme-dark{--bg:#0f172a;--card:#1e293b;--line:#475569;--text:#f8fafc;--muted:#cbd5e1;--primary:#14b8a6}
+    body.theme-dark .card,
+    body.theme-dark .monster-item,
+    body.theme-dark .boss-card,
+    body.theme-dark .xp-wrap,
+    body.theme-dark .battle-arena,
+    body.theme-dark .modal,
+    body.theme-dark .theme-dot,
+    body.theme-dark .pill{
+      background:#1e293b!important;
+      color:#f8fafc!important;
+      border-color:#475569!important;
+    }
+    body.theme-dark .title-main,
+    body.theme-dark h2,
+    body.theme-dark h3,
+    body.theme-dark .group-title,
+    body.theme-dark .meta,
+    body.theme-dark .muted,
+    body.theme-dark .footer-help,
+    body.theme-dark .version-tag{
+      color:#f8fafc!important;
+    }
+    body.theme-dark .meta *{color:#f8fafc!important}
+    body.theme-dark .alive{color:#4ade80!important}
+    body.theme-dark .dead{color:#f87171!important}
+    body.theme-dark .locked{color:#fbbf24!important}
+    body.theme-dark input[type="text"],
+    body.theme-dark input[type="password"]{
+      background:#0f172a!important;
+      color:#f8fafc!important;
+      border-color:#64748b!important;
+    }
+    body.theme-dark .btn.secondary{background:#0f172a!important;color:#f8fafc!important;border-color:#94a3b8!important}
+    body.theme-dark .btn.ghost{background:#312e81!important;color:#e0e7ff!important;border-color:#818cf8!important}
+    body.theme-dark .option-label:hover{background:#334155!important}
+
     .hide{display:none!important}
   </style>
 </head>
@@ -131,7 +169,7 @@
     <div class="footer-help">
       有问题可直接 WhatsApp 老师：<a href="https://wa.me/60167312519" target="_blank" rel="noopener">016-7312519</a>
     </div>
-    <div class="version-tag" id="versionTag">版本：2026.04.19.1</div>
+    <div class="version-tag" id="versionTag">版本：2026.05.05.1</div>
   </div>
 </div>
 
@@ -146,9 +184,10 @@
       <div class="pill" id="statBook">科目：-</div>
       <button id="topRulesBtn" class="btn ghost small" type="button">📜 游戏规则</button>
       <button id="topBoardBtn" class="btn ghost small" type="button">🏆 排行榜</button>
-      <button id="topThemeBtn" class="btn ghost small" type="button">🎨 背景</button>
+      
     </div>
-    <div class="theme-panel" id="themePanelTop" style="display:none;">
+    <div class="muted" style="margin-top:8px;">背景颜色 / Theme</div>
+    <div class="theme-panel" id="themePanelTop">
       <button class="theme-dot" data-theme="soft">白色</button>
       <button class="theme-dot" data-theme="warm">米色</button>
       <button class="theme-dot" data-theme="green">绿色</button>
@@ -161,7 +200,7 @@
       <div class="xp-text" id="statExp">⚡0 / 100</div>
     </div>
     <div id="levelUpMsg" class="levelup"></div>
-    <div class="version-tag">版本：2026.04.19.1</div>
+    <div class="version-tag">版本：2026.05.05.1</div>
   </div>
   <div id="chapterWrap"></div>
 </div>
@@ -271,7 +310,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const SCRIPT_URL = document.getElementById('postForm').getAttribute('action');
   const STORAGE_KEY = 'kee_quiz_game_auth_v1';
   const TZ = 'Asia/Kuala_Lumpur';
-  const APP_VERSION = '2026.04.19.1';
+  const APP_VERSION = '2026.05.05.1';
   let serverBaseMs = 0;
   let perfBaseMs = 0;
 
@@ -314,10 +353,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (document.getElementById('refreshBtn')) document.getElementById('refreshBtn').onclick = forceRefreshPage;
   document.getElementById('topRulesBtn').onclick = () => toggleRules(true);
   document.getElementById('topBoardBtn').onclick = () => toggleBoard(true);
-  document.getElementById('topThemeBtn').onclick = () => {
-    const p = document.getElementById('themePanelTop');
-    p.style.display = p.style.display === 'none' ? 'flex' : 'none';
-  };
   document.getElementById('closeRulesBtn').onclick = () => toggleRules(false);
   document.getElementById('closeBoardBtn').onclick = () => toggleBoard(false);
   document.getElementById('rulesMask').onclick = (e) => { if (e.target.id === 'rulesMask') toggleRules(false); };
