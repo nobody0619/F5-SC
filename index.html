@@ -169,7 +169,7 @@
     <div class="footer-help">
       有问题可直接 WhatsApp 老师：<a href="https://wa.me/60167312519" target="_blank" rel="noopener">016-7312519</a>
     </div>
-    <div class="version-tag" id="versionTag">版本：2026.05.05.5</div>
+    <div class="version-tag" id="versionTag">版本：2026.05.05.6</div>
   </div>
 </div>
 
@@ -200,7 +200,7 @@
       <div class="xp-text" id="statExp">⚡0 / 100</div>
     </div>
     <div id="levelUpMsg" class="levelup"></div>
-    <div class="version-tag">版本：2026.05.05.5</div>
+    <div class="version-tag">版本：2026.05.05.6</div>
   </div>
   <div id="chapterWrap"></div>
 </div>
@@ -310,7 +310,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const SCRIPT_URL = document.getElementById('postForm').getAttribute('action');
   const STORAGE_KEY = 'kee_quiz_game_auth_v1';
   const TZ = 'Asia/Kuala_Lumpur';
-  const APP_VERSION = '2026.05.05.5';
+  const APP_VERSION = '2026.05.05.6';
   let serverBaseMs = 0;
   let perfBaseMs = 0;
 
@@ -1108,6 +1108,59 @@ document.addEventListener('DOMContentLoaded', () => {
     return m === 'practice' ? '普通练习' : (m === 'monster' ? '小怪挑战' : 'Boss挑战');
   }
 
+
+  function jsonpApi(params, timeoutMs=15000){
+    return new Promise((resolve, reject) => {
+      const cb = 'cb_' + Date.now() + '_' + Math.random().toString(36).slice(2);
+      const s = document.createElement('script');
+      const timer = setTimeout(() => { cleanup(); reject(new Error('JSONP timeout')); }, timeoutMs);
+      const q = new URLSearchParams({ ...params, callback: cb, v:APP_VERSION, _:String(Date.now()) });
+      window[cb] = (data) => { cleanup(); resolve(data); };
+      s.onerror = () => { cleanup(); reject(new Error('JSONP error')); };
+      function cleanup(){
+        clearTimeout(timer);
+        try { delete window[cb]; } catch(e) { window[cb] = undefined; }
+        s.remove();
+      }
+      s.src = SCRIPT_URL + '?' + q.toString();
+      document.body.appendChild(s);
+    });
+  }
+
+  function submitByHiddenForm(payload){
+    return new Promise(resolve => {
+      const form = document.getElementById('postForm');
+      form.book.value    = payload.book || '';
+      form.quizId.value  = payload.quizId || '';
+      form.name.value    = payload.name || '';
+      form.score.value   = payload.score || 0;
+      form.correct.value = payload.correct || 0;
+      form.wrong.value   = payload.wrong || 0;
+      form.time.value    = payload.time || 0;
+      form.mode.value    = payload.mode || '';
+      form.expGained.value = payload.expGained || 0;
+      try { form.submit(); } catch(e) {}
+      setTimeout(() => resolve({ ok:true, via:'form' }), 1400);
+    });
+  }
+
+  async function submitPayloadHybrid(payload){
+    // 1) fetch: fastest when browser allows it
+    try {
+      const r = await apiFetch(payload, 2);
+      if (r && r.ok) return r;
+    } catch(e) {}
+
+    // 2) JSONP: avoids CORS, can confirm Apps Script response
+    try {
+      const r = await jsonpApi(payload, 15000);
+      if (r && r.ok) return r;
+    } catch(e) {}
+
+    // 3) hidden form POST: last fallback, cannot read response but usually writes
+    return await submitByHiddenForm({ ...payload, action:'submitScore' });
+  }
+
   async function submitScore(durationSeconds){
     const payload = {
       action:'submitScoreV2',
@@ -1127,9 +1180,9 @@ document.addEventListener('DOMContentLoaded', () => {
     setLoading(true, '正在提交成绩，请不要关闭页面...');
 
     try {
-      const res = await apiFetch(payload, 3);
+      const res = await submitPayloadHybrid(payload);
       if (res && res.ok) {
-        const extra = res.sheetName ? `（${res.sheetName} 第${res.row || '-'}行）` : '';
+        const extra = res.sheetName ? `（${res.sheetName} 第${res.row || '-'}行）` : (res.via === 'form' ? '（已发送）' : '');
         document.getElementById('submit-status').textContent = res.duplicate
           ? '✅ 成绩已提交（重复记录已自动忽略）'
           : '✅ 成绩已提交 ' + extra;
@@ -1164,7 +1217,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let okCount = 0;
     for (const item of arr) {
       try {
-        const res = await apiFetch(item, 3);
+        const res = await submitPayloadHybrid(item);
         if (res && res.ok) okCount++;
         else remain.push(item);
       } catch(e) { remain.push(item); }
