@@ -169,7 +169,7 @@
     <div class="footer-help">
       有问题可直接 WhatsApp 老师：<a href="https://wa.me/60167312519" target="_blank" rel="noopener">016-7312519</a>
     </div>
-    <div class="version-tag" id="versionTag">版本：2026.05.05.2</div>
+    <div class="version-tag" id="versionTag">版本：2026.05.05.4</div>
   </div>
 </div>
 
@@ -200,7 +200,7 @@
       <div class="xp-text" id="statExp">⚡0 / 100</div>
     </div>
     <div id="levelUpMsg" class="levelup"></div>
-    <div class="version-tag">版本：2026.05.05.2</div>
+    <div class="version-tag">版本：2026.05.05.4</div>
   </div>
   <div id="chapterWrap"></div>
 </div>
@@ -310,7 +310,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const SCRIPT_URL = document.getElementById('postForm').getAttribute('action');
   const STORAGE_KEY = 'kee_quiz_game_auth_v1';
   const TZ = 'Asia/Kuala_Lumpur';
-  const APP_VERSION = '2026.05.05.2';
+  const APP_VERSION = '2026.05.05.4';
   let serverBaseMs = 0;
   let perfBaseMs = 0;
 
@@ -1106,6 +1106,7 @@ document.addEventListener('DOMContentLoaded', () => {
   async function submitScore(durationSeconds){
     const form = document.getElementById('postForm');
     const payload = {
+      action:'submitScore',
       book,
       quizId: currentMode === 'boss' ? `Bab ${currentBab} Boss` : currentRow[chapterKey],
       name: displayUser || user,
@@ -1116,14 +1117,38 @@ document.addEventListener('DOMContentLoaded', () => {
       mode: currentMode,
       expGained: currentExpGain
     };
+
+    form.book.value    = payload.book;
+    form.quizId.value  = payload.quizId;
+    form.name.value    = payload.name;
+    form.score.value   = payload.score;
+    form.correct.value = payload.correct;
+    form.wrong.value   = payload.wrong;
+    form.time.value    = payload.time;
+    form.mode.value    = payload.mode;
+    form.expGained.value = payload.expGained;
+
     document.getElementById('submit-status').textContent = '正在提交成绩，请稍等...';
     setLoading(true, '正在提交成绩，请不要关闭页面...');
+
     try {
-      const res = await apiFetch({ action:'submitScore', ...payload }, 3);
-      document.getElementById('submit-status').textContent = res.ok ? '✅ 成绩已提交' : '⚠️ 成绩提交失败，请截图给老师';
+      // 先用 fetch 提交并确认结果；失败才用隐藏 form 兜底。
+      const res = await apiFetch(payload, 3);
+      if (res && res.ok) {
+        document.getElementById('submit-status').textContent = res.duplicate ? '✅ 成绩已提交（重复记录已自动忽略）' : '✅ 成绩已提交';
+        return;
+      }
+      throw new Error((res && res.error) || 'submitScore failed');
     } catch(e) {
-      console.error(e);
-      document.getElementById('submit-status').textContent = '⚠️ 成绩提交失败，请刷新或截图给老师';
+      console.warn('fetch submit failed, fallback to form POST', e);
+      try {
+        form.submit();
+        await new Promise(resolve => setTimeout(resolve, 1300));
+        document.getElementById('submit-status').textContent = '✅ 成绩已提交';
+      } catch(err) {
+        console.error(err);
+        document.getElementById('submit-status').textContent = '⚠️ 成绩提交失败，请截图给老师';
+      }
     } finally {
       setLoading(false);
     }
