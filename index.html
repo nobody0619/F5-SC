@@ -141,6 +141,19 @@
     body.theme-dark .btn.ghost{background:#312e81!important;color:#e0e7ff!important;border-color:#818cf8!important}
     body.theme-dark .option-label:hover{background:#334155!important}
 
+
+    .firework-piece{
+      position:fixed;width:8px;height:8px;border-radius:50%;
+      pointer-events:none;z-index:99999;
+      animation:fireworkFly .9s ease-out forwards;
+    }
+    @keyframes fireworkFly{
+      0%{transform:translate(0,0) scale(1);opacity:1}
+      100%{transform:translate(var(--dx),var(--dy)) scale(.2);opacity:0}
+    }
+    .finish-pop{animation:finishPop .45s ease}
+    @keyframes finishPop{0%{transform:scale(.96);opacity:.75}60%{transform:scale(1.03);opacity:1}100%{transform:scale(1)}}
+
     .hide{display:none!important}
   </style>
 </head>
@@ -170,7 +183,7 @@
     <div class="footer-help">
       有问题可直接 WhatsApp 老师：<a href="https://wa.me/60167312519" target="_blank" rel="noopener">016-7312519</a>
     </div>
-    <div class="version-tag" id="versionTag">版本：2026.05.20.2</div>
+    <div class="version-tag" id="versionTag">版本：2026.05.20.3</div>
   </div>
 </div>
 
@@ -201,7 +214,7 @@
       <div class="xp-text" id="statExp">⚡0 / 100</div>
     </div>
     <div id="levelUpMsg" class="levelup"></div>
-    <div class="version-tag">版本：2026.05.20.2</div>
+    <div class="version-tag">版本：2026.05.20.3</div>
   </div>
   <div id="chapterWrap"></div>
 </div>
@@ -312,7 +325,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const SCRIPT_URL = document.getElementById('postForm').getAttribute('action');
   const STORAGE_KEY = 'kee_quiz_game_auth_v1';
   const TZ = 'Asia/Kuala_Lumpur';
-  const APP_VERSION = '2026.05.20.2';
+  const APP_VERSION = '2026.05.20.3';
   let serverBaseMs = 0;
   let perfBaseMs = 0;
   let deferredInstallPrompt = null;
@@ -338,6 +351,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let correctStreak = 0;
   let battleEndedByDeath = false;
   let lastFocusId = '';
+  let afterFinishRefreshTimer = null;
   let currentMonsterRowsForBoss = [];
   let countCache = new Map();
   let monsterQuestionCache = new Map();
@@ -1072,6 +1086,52 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+
+  function launchFireworks(){
+    const colors = ['#ef4444','#f97316','#facc15','#22c55e','#06b6d4','#6366f1','#ec4899'];
+    for (let b=0;b<4;b++){
+      const cx = window.innerWidth * (0.2 + Math.random()*0.6);
+      const cy = window.innerHeight * (0.18 + Math.random()*0.35);
+      setTimeout(() => {
+        for (let i=0;i<26;i++){
+          const p = document.createElement('div');
+          p.className = 'firework-piece';
+          p.style.left = cx + 'px';
+          p.style.top = cy + 'px';
+          p.style.background = colors[Math.floor(Math.random()*colors.length)];
+          const angle = Math.random() * Math.PI * 2;
+          const dist = 60 + Math.random()*110;
+          p.style.setProperty('--dx', Math.cos(angle)*dist + 'px');
+          p.style.setProperty('--dy', Math.sin(angle)*dist + 'px');
+          document.body.appendChild(p);
+          setTimeout(() => p.remove(), 1000);
+        }
+      }, b*180);
+    }
+    const fin = document.getElementById('finish');
+    if (fin) { fin.classList.remove('finish-pop'); void fin.offsetWidth; fin.classList.add('finish-pop'); }
+  }
+
+  function refreshLatestProgressSoon(){
+    const status = document.getElementById('submit-status');
+    const attempts = [1200, 3500, 7000];
+    attempts.forEach((delay, idx) => {
+      setTimeout(async () => {
+        try {
+          await loadProgress();
+          updateHeader();
+          if (idx === attempts.length - 1 && status) {
+            status.textContent = (status.textContent || '').replace('（后台处理中）','') + '｜怪兽状态已更新';
+          }
+        } catch(e) {
+          if (idx === attempts.length - 1 && status) {
+            status.textContent = (status.textContent || '') + '｜怪兽状态稍后刷新';
+          }
+        }
+      }, delay);
+    });
+  }
+
   async function finishQuiz(){
     if (!qs.length) {
       alert('题库没有成功加载，系统不会提交空成绩。请等几秒后再试。');
@@ -1079,6 +1139,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     document.getElementById('quiz').style.display='none';
     document.getElementById('finish').style.display='block';
+    launchFireworks();
 
     const quizEndTime = Date.now();
     const usedSeconds = chapterStart ? Math.floor((quizEndTime - chapterStart)/1000) : 0;
@@ -1150,11 +1211,16 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('submit-status').textContent = '正在送出成绩…';
 
     await submitScore(usedSeconds);
+    refreshLatestProgressSoon();
 
     const ctrl=document.getElementById('controls'); ctrl.innerHTML='';
     const back=document.createElement('button'); back.className='btn';
     back.textContent='返回章节选择';
-    back.onclick=()=>{ document.getElementById('finish').style.display='none'; showChapterList(); };
+    back.onclick=()=>{ 
+      document.getElementById('finish').style.display='none'; 
+      showChapterList(); 
+      loadProgress().then(()=>{ updateHeader(); showChapterList(); }).catch(()=>{});
+    };
     ctrl.appendChild(back);
   }
 
