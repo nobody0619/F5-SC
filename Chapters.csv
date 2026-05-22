@@ -27,19 +27,19 @@ F5 SC Chp 5 5.4 脂肪,Fats,F5 SC Chp 5 5.4.csv
 F5 SC Chp 5 5.5 棕油-特点,Palm oil,F5 SC Chp 5 5.5 A.csv
 F5 SC Chp 5 5.5 棕油-提炼过程,Extraction Process,F5 SC Chp 5 5.5 B.csv
 F5 SC Chp 5 5.5 肥皂,Soap,F5 SC Chp 5 5.5 C.csv
-F5 SC Chp 6 6.1 part 1,Electrolytic Cell,F5 SC Chp 6 6.1 part 1 A.csv
-F5 SC Chp 6 6.1 part 1,Ion,F5 SC Chp 6 6.1 part 1 B.csv
-F5 SC Chp 6 6.1 part 1,Test gas,F5 SC Chp 6 6.1 part 1 C.csv
-F5 SC Chp 6 6.1 part 2,Position of ions in the electrochemical series,F5 SC Chp 6 6.1 part 2.csv
-F5 SC Chp 6 6.1 part 3,Concentration of electrolyte,F5 SC Chp 6 6.1 part 3 A.csv
-F5 SC Chp 6 6.1 part 3,Types of Electrode,F5 SC Chp 6 6.1 part 3 B.csv
-F5 SC Chp 6 6.1 part 4,Extraction & Purification of metals,F5 SC Chp 6 6.1 part 4 A.csv
-F5 SC Chp 6 6.1 part 4,Electroplating of metals,F5 SC Chp 6 6.1 part 4 B.csv
-F5 SC Chp 6 6.1 part 4,Wastewater treatment using electrocoagulation,F5 SC Chp 6 6.1 part 4 C.csv
+F5 SC Chp 6 6.1 part 1 电解电池,Electrolytic Cell,F5 SC Chp 6 6.1 part 1 A.csv
+F5 SC Chp 6 6.1 part 1 离子,Ion,F5 SC Chp 6 6.1 part 1 B.csv
+F5 SC Chp 6 6.1 part 1 测试气体,Test gas,F5 SC Chp 6 6.1 part 1 C.csv
+F5 SC Chp 6 6.1 part 2 电化序,Position of ions in the electrochemical series,F5 SC Chp 6 6.1 part 2.csv
+F5 SC Chp 6 6.1 part 3 电解质浓度,Concentration of electrolyte,F5 SC Chp 6 6.1 part 3 A.csv
+F5 SC Chp 6 6.1 part 3 电极种类,Types of Electrode,F5 SC Chp 6 6.1 part 3 B.csv
+F5 SC Chp 6 6.1 part 4 提炼金属,Extraction & Purification of metals,F5 SC Chp 6 6.1 part 4 A.csv
+F5 SC Chp 6 6.1 part 4 电镀金属,Electroplating of metals,F5 SC Chp 6 6.1 part 4 B.csv
+F5 SC Chp 6 6.1 part 4 废水处理,Wastewater treatment using electrocoagulation,F5 SC Chp 6 6.1 part 4 C.csv
 F5 SC Chp 6 6.2 Chemical Cell,Chemical Cell,F5 SC Chp 6 6.2.csv
 F5 SC Chp 7 7.1 位置,Convex lens & Concave lens / Kanta cembung & Kanta cekung,F5 SC Chp 7 7.1 A.csv
 F5 SC Chp 7 7.1 特征,Convex lens & Concave lens / Kanta cembung & Kanta cekung,F5 SC Chp 7 7.1 B.csv
-F5 SC Chp 7 7.2,Optical Instruments,F5 SC Chp 7 7.2.csv
+F5 SC Chp 7 7.2 光学仪器,Optical Instruments,F5 SC Chp 7 7.2.csv
 F5 SC Chp 8 Pascal’s Principle,Pascal’s Principle,F5 SC Chp 8 A.csv
 F5 SC Chp 8 Bernoulli’s Principle,Bernoulli’s Principle,F5 SC Chp 8 B.csv
 F5 SC Chp 9 9.1 卫星,Satellite,F5 SC Chp 9 9.1.csv
@@ -57,7 +57,7 @@ SPM SC 实验 8: 微生物(营养),Effect of nutrient on bacteria growth / Kesan
 SPM SC 实验 9: 微生物(潮湿度),Effect of humidity on bacteria growth / Kesan kelembapan terhadap pertumbuhan bakteria,SPM SC Experiment 9.csv
 SPM SC 实验 10: 微生物(光),Effect of presence of light on bacteria growth / Kesan kehadiran cahaya terhadap pertumbuhan bakteria,SPM SC Experiment 10.csv
 SPM SC 实验 11: 微生物(温度),Effect of temperature on bacteria growth / Kesan suhu terhadap pertumbuhan bakteria,SPM SC Experiment 11.csv
-SPM SC 实验 12: 微生物(pH Vale),Effect of pH value on bacteria growth / Kesan nilai pH terhadap pertumbuhan bakteria,SPM SC Experiment 12.csv
+SPM SC 实验 12: 微生物(pH Value),Effect of pH value on bacteria growth / Kesan nilai pH terhadap pertumbuhan bakteria,SPM SC Experiment 12.csv
 SPM SC 实验 13: 抗生素,Effect of antibiotic on bacteria growth / Kesan antibiotik terhadap pertumbuhan bakteria,SPM SC Experiment 13.csv
 SPM SC 实验 14: 卡路里,Calorific value in food samples / Nilai kalori dalam sampel makanan,SPM SC Experiment 14.csv
 SPM SC 实验 15: 植物营养,Effect of macronutrient deficiency on plants / Kesan kekurangan makronutrien kepada tumbuhan,SPM SC Experiment 15.csv
